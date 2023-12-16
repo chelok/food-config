@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: food-certificado
+spec:
+  domains:
+  - store-test.rhinox.io
+  - www.store-test.rhinox.io
