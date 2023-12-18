@@ -28,16 +28,3 @@ spec:
             cpu: "300m"
         ports:
         - containerPort: 3000
-        # Probar que está respondiendo el pod
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        # Probar que el pod está vivo
-        livenessProbe:
-          tcpSocket:
-            port: 3000
-          initialDelaySeconds: 15
-          periodSeconds: 20
